@@ -1,0 +1,295 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("./images/night.jpg") no-repeat center fixed;
+  /* background-image: url('./images/night.jpg'); */
+  /* background-color: rgba(26, 23, 23, 0.527); */
+  background-size: cover;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+}
+
+#ask-name,
+#greeting,
+#ask-focus,
+#main-focus,
+#quote {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#quote {
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Base Styles*/
+#display-time {
+  font-size: 7rem;
+}
+
+#name-greeting {
+  font-size: 3rem;
+  padding-bottom: 20px;
+}
+
+#main-focus {
+  font-size: 3rem;
+  margin-bottom: 8rem;
+  margin-top: 7rem;
+}
+
+#today {
+  font-size: 2rem;
+}
+
+#quote-ul {
+  font-size: 1rem;
+  padding: 50px;
+}
+
+#quote-ul li {
+  padding: 10px;
+  text-align: start;
+  max-width: 100%;
+}
+
+/* Inputs */
+
+#input-name,
+#input-focus,
+#input-quote,
+#input-to-do {
+  width: 100%;
+  padding-top: 4px;
+  display: block;
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 400;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.2s ease;
+  margin-bottom: 6rem;
+}
+
+#input-to-do {
+  font-size: 1rem;
+  width: 60%;
+}
+
+#input-name {
+  margin-bottom: 1rem;
+}
+
+#get-quote {
+  display: none;
+}
+
+#input-quote {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* buttons */
+
+button {
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  padding: 11px 16px;
+  border-width: 1px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: rgba(15, 15, 15, 0.8);
+  border-color: rgba(15, 15, 15, 0.8);
+  /* border: none; */
+}
+
+/* Modal for quotes */
+
+.modal-quote-bg {
+  color: white;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.modal-quote-bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-quote {
+  position: relative;
+  background-color: rgba(26, 25, 25, 0.9);
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+  /* padding: 20%; */
+  /* margin-top: 20%; */
+}
+
+.modal-quote h2 {
+  margin-top: 20%;
+}
+
+.modal-quote-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Modal for to do list */
+
+.modal-to-do-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+  /* overflow: auto; */
+}
+
+.modal-to-do-bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-to-do {
+  position: relative;
+  background-color: rgba(26, 25, 25, 0.9);
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+  /* padding-top: 50px; */
+}
+
+.modal-to-do h2 {
+  margin-top: 5%;
+}
+
+.modal-to-do-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-to-do-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#to-do-ul {
+  list-style-type: none;
+}
+
+#to-do-ul li {
+  padding: 10px;
+}
+
+#input-to-do {
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+#to-do-ul label {
+  padding-left: 10px;
+}
+
+input[type="checkbox"]:checked + label.strikethrough {
+  text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+/* #todo1 {
+    margin: 0;
+    padding: 0; */
+/* display: absolute; !important
+    top: 0px;
+    
+
+    justify-content: flex-start; !important */
+/* display: inline-block; */
+/* } */
+
+/* #to-do-ul { */
+
+/* width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0; */
+/* display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; */
+/* display: inline-block; */
+/* } */
+
+/* #todolabel {
+    color: white;
+} */

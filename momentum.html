@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <div id="ask-name">
+            <h1>What's your name?</h1>
+            <input type="text" id="input-name">
+            <button id="submit-name">Continue</button>
+        </div>
+        <div id="greeting">
+            <h2 id="display-time"></h2>
+            <h3 id="name-greeting"></h3>
+        </div>
+        <div id="ask-focus">
+            <h3>What is your main focus for today?</h3>
+            <input type="text" id="input-focus">
+        </div>
+        <div id="main-focus">
+            <p id="today">TODAY</p>
+            <p id="display-focus"></p>
+        </div>
+
+        <div id="quote">
+            <p id="display-quote"></p>
+            <div id="get-quote"><input type="text" id="input-quote" placeholder="Enter quote here"></div>
+            <div id="buttons">
+                <button id="all-quotes-btn">All Quotes</button>
+                <button id="random-quote-btn">Random Quote</button>
+                <button id="add-quote-btn">Add Quote</button>
+                <button id="to-do-btn">TO DO</button>
+            </div>
+        </div>
+
+        <div class="modal-quote-bg">
+            <div class="modal-quote">
+                <h2>Quotes</h2>
+                <ul id="quote-ul"></ul>
+                <span class="modal-quote-close">X</span>
+            </div>
+        </div>
+
+        <div class="modal-to-do-bg">
+            <div class="modal-to-do">
+                <h2>TO DO LIST</h2>
+                <input type="text" id="input-to-do" placeholder="Enter To Do">
+                <ul id="to-do-ul"></ul>
+                <span class="modal-to-do-close">X</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
